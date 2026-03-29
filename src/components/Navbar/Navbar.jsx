@@ -69,7 +69,7 @@ const Navbar = ({ carts }) => {
           </ul>
         </div>
         <div className="navbar-end flex gap-4 items-center">
-          <a className="relative" href="">
+          <a className="relative" href="#">
             <div>
                 <HiOutlineShoppingCart className="text-xl font-semibold text-[#101727]" />
             </div>
