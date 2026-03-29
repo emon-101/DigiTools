@@ -23,7 +23,7 @@ const Cart = ({ cart, carts, setCarts }) => {
             <p className="mt-2 font-bold text-zinc-400">${cart.price}</p>
           </div>
         </div>
-        <button onClick={()=> handleRemoveCard(cart.id)} className="font-bold text-[#FF3980]">Remove</button>
+        <button onClick={()=> handleRemoveCard(cart.id)} className="font-bold text-[#FF3980] transition-all cursor-pointer hover:scale-105">Remove</button>
       </div>
     </div>
   );

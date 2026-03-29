@@ -18,7 +18,7 @@ function App() {
   const [carts, setCarts] = useState([]);
   return (
     <>
-      <Navbar />
+      <Navbar carts={carts} />
       <Banner />
       <Stats />
       {/* Toggle Card Section */}
@@ -45,7 +45,7 @@ function App() {
               type="radio"
               name="my_tabs_1"
               className={`tab rounded-full font-semibold ${tab === "cart" && "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"}`}
-              aria-label={`Cart (0)`}
+              aria-label={`Cart (${carts.length})`}
               onClick={() => setTab("cart")}
             />
           </div>

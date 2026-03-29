@@ -1,7 +1,7 @@
 import React from "react";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 
-const Navbar = () => {
+const Navbar = ({ carts }) => {
   return (
     <div className="shadow-sm">
       <div className="navbar bg-base-100 w-4/5 mx-auto py-5">
@@ -69,8 +69,13 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end flex gap-4 items-center">
-          <a href="">
-            <HiOutlineShoppingCart className="text-xl font-semibold text-[#101727]" />
+          <a className="relative" href="">
+            <div>
+                <HiOutlineShoppingCart className="text-xl font-semibold text-[#101727]" />
+            </div>
+            {
+                carts.length !== 0 ? <div className="absolute -top-2 -right-3 bg-red-500 rounded-full p-1"><span className="text-white text-sm w-3 h-3 flex justify-center items-center">{carts.length}</span></div> : ""
+            }
           </a>
           <a className="font-semibold text-[#101727]" href="">
             Login

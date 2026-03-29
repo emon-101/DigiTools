@@ -41,8 +41,8 @@ const Card = ({ card, carts, setCarts }) => {
         </div>
         {/* Lists */}
         <ul>
-          {card.features.map((list) => (
-            <li className="flex gap-2 items-center text-zinc-400 font-extralight">
+          {card.features.map((list, idx) => (
+            <li key={idx} className="flex gap-2 items-center text-zinc-400 font-extralight">
               <BiCheck className="text-2xl text-green-500" />
               {list}
             </li>
