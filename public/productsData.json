@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "AI Writing Pro",
+    "description": "Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.",
+    "price": 29,
+    "period": "monthly",
+    "tag": "Best Seller",
+    "tagType": "best-seller",
+    "features": [
+      "Unlimited AI generations",
+      "50+ writing templates",
+      "Grammar checker"
+    ],
+    "icon": "https://i.ibb.co.com/hxRJwLXc/camera.png"
+  },
+  {
+    "id": 2,
+    "name": "Resume Builder Plus",
+    "description": "Create professional resumes with modern templates and ATS optimization.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": [
+      "100+ templates",
+      "ATS optimization",
+      "Export to PDF"
+    ],
+    "icon": "https://i.ibb.co.com/Fpp4mVN/design-tool.png"
+  },
+  {
+    "id": 3,
+    "name": "Social Media Booster",
+    "description": "Automate and enhance your social media posts with AI-generated content.",
+    "price": 15,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "new",
+    "features": [
+      "Auto post scheduling",
+      "Content suggestions",
+      "Analytics dashboard"
+    ],
+    "icon": "https://i.ibb.co.com/cKznPgX1/operation.png"
+  },
+  {
+    "id": 4,
+    "name": "Email Marketing Pro",
+    "description": "Design and send high-converting email campaigns effortlessly.",
+    "price": 49,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": [
+      "Email templates",
+      "Automation workflows",
+      "Detailed reports"
+    ],
+    "icon": "https://i.ibb.co.com/gLGkmjWK/portfolio.png"
+  },
+  {
+    "id": 5,
+    "name": "Graphic Design Kit",
+    "description": "Create stunning graphics with easy drag-and-drop tools.",
+    "price": 99,
+    "period": "yearly",
+    "tag": "Best Seller",
+    "tagType": "best-seller",
+    "features": [
+      "500+ templates",
+      "Stock images",
+      "Brand kit"
+    ],
+    "icon": "https://i.ibb.co.com/67ZsLv2M/social-media.png"
+  },
+  {
+    "id": 6,
+    "name": "Video Editor Lite",
+    "description": "Edit videos quickly with simple tools and effects.",
+    "price": 25,
+    "period": "one-time",
+    "tag": "New",
+    "tagType": "new",
+    "features": [
+      "Basic editing tools",
+      "Transitions",
+      "Export HD videos"
+    ],
+    "icon": "https://i.ibb.co.com/p7K6ZNY/writing-2327400-1.png"
+  }
+]

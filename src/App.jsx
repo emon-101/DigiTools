@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import "./App.css";
 import Banner from "./components/Banner/Banner";
 import Navbar from "./components/Navbar/Navbar";
@@ -6,8 +6,13 @@ import Stats from "./components/Stats/Stats";
 import Cards from "./components/Cards/Cards";
 import ShoppingCarts from "./components/ShoppingCarts/ShoppingCarts";
 
-function App() {
+const fetchProducts = async () => {
+  const res = await fetch("/productsData.json");
+  return res.json();
+};
 
+function App() {
+  const productsPromise = fetchProducts();
   const [tab, setTab] = useState("products");
   return (
     <>
@@ -29,26 +34,30 @@ function App() {
             <input
               type="radio"
               name="my_tabs_1"
-              className={`tab rounded-full font-semibold ${tab==="products" && "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"}`}
+              className={`tab rounded-full font-semibold ${tab === "products" && "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"}`}
               aria-label="Products"
               defaultChecked
-              onClick={()=> setTab("products")}
+              onClick={() => setTab("products")}
             />
             <input
               type="radio"
               name="my_tabs_1"
-              className={`tab rounded-full font-semibold ${tab==="cart" && "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"}`}
+              className={`tab rounded-full font-semibold ${tab === "cart" && "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"}`}
               aria-label={`Cart (0)`}
-              onClick={()=> setTab("cart")}
+              onClick={() => setTab("cart")}
             />
           </div>
         </div>
 
         {/* Section Interchange */}
         <div className="">
-          {
-            tab==="products" ? <Cards /> : <ShoppingCarts />
-          }
+          {tab === "products" ? (
+            <Suspense fallback={<div className="flex justify-center py-5"><span className="loading loading-bars loading-xl"></span></div>}>
+              <Cards productsPromise={productsPromise} />
+            </Suspense>
+          ) : (
+            <ShoppingCarts />
+          )}
         </div>
       </div>
     </>
