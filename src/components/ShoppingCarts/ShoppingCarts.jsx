@@ -9,7 +9,7 @@ const ShoppingCarts = ({ carts, setCarts }) => {
       {/* Carts */}
       <div className="">
         {
-            carts.map(cart => <Cart key={cart.id} cart={cart} />)
+            carts.map(cart => <Cart key={cart.id} cart={cart} carts={carts} setCarts={setCarts} />)
         }
       </div>
     </div>

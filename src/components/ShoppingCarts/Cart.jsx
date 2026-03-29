@@ -1,6 +1,12 @@
 import React from "react";
+import { toast } from "react-toastify";
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, carts, setCarts }) => {
+    const handleRemoveCard = (id) => {
+        const filteredCards = carts.filter(item => item.id !== id);
+        setCarts(filteredCards);
+        toast.success("Removed Item form the Carts");
+    }
   return (
     <div>
       <div className="flex justify-between items-center rounded-2xl bg-base-200 overflow-hidden p-6 mb-6">
@@ -17,7 +23,7 @@ const Cart = ({ cart }) => {
             <p className="mt-2 font-bold text-zinc-400">${cart.price}</p>
           </div>
         </div>
-        <button className="font-bold text-[#FF3980]">Remove</button>
+        <button onClick={()=> handleRemoveCard(cart.id)} className="font-bold text-[#FF3980]">Remove</button>
       </div>
     </div>
   );

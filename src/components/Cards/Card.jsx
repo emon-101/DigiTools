@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import { BiCheck } from "react-icons/bi";
+import { toast } from "react-toastify";
 
 const Card = ({ card, carts, setCarts }) => {
 //   console.log(card);
   const [buy, setBuy] = useState(false);
 
   const handleBuyCard = () => {
-    setBuy(!buy);
+    const isExist = carts.find(item => item.id === card.id);
+    if(isExist) {
+        toast.error("Item is Already in Carts");
+        return;
+    }
+    setBuy(true);
     setCarts([...carts, card]);
+    toast.success("Item is Added Succusfully");
   }
   return (
     <div>

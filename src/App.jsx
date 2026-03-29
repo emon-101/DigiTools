@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Stats from "./components/Stats/Stats";
 import Cards from "./components/Cards/Cards";
 import ShoppingCarts from "./components/ShoppingCarts/ShoppingCarts";
+import { ToastContainer } from "react-toastify";
 
 const fetchProducts = async () => {
   const res = await fetch("/productsData.json");
@@ -61,6 +62,8 @@ function App() {
           )}
         </div>
       </div>
+
+      <ToastContainer />
     </>
   );
 }
