@@ -14,6 +14,7 @@ const fetchProducts = async () => {
 function App() {
   const productsPromise = fetchProducts();
   const [tab, setTab] = useState("products");
+  const [carts, setCarts] = useState([]);
   return (
     <>
       <Navbar />
@@ -53,10 +54,10 @@ function App() {
         <div className="">
           {tab === "products" ? (
             <Suspense fallback={<div className="flex justify-center py-5"><span className="loading loading-bars loading-xl"></span></div>}>
-              <Cards productsPromise={productsPromise} />
+              <Cards carts={carts} setCarts={setCarts} productsPromise={productsPromise} />
             </Suspense>
           ) : (
-            <ShoppingCarts />
+            <ShoppingCarts carts={carts} setCarts={setCarts} />
           )}
         </div>
       </div>

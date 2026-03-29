@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { BiCheck } from "react-icons/bi";
 
-const Card = ({ card }) => {
-  console.log(card);
+const Card = ({ card, carts, setCarts }) => {
+//   console.log(card);
+  const [buy, setBuy] = useState(false);
+
+  const handleBuyCard = () => {
+    setBuy(!buy);
+    setCarts([...carts, card]);
+  }
   return (
     <div>
       <div className="relative rounded-2xl shadow border border-zinc-400 overflow-hidden p-6">
@@ -36,9 +42,9 @@ const Card = ({ card }) => {
           ))}
         </ul>
         {/* Buttons */}
-        <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] py-2 rounded-full text-white transition-all hover:grayscale-50 font-medium w-full mt-4">
-          Buy Now
-        </a>
+        <button onClick={handleBuyCard} className={`btn py-2 rounded-full text-white transition-all hover:grayscale-50 font-medium w-full mt-4 ${buy ? "bg-green-500": "bg-linear-to-r from-[#4F39F6] to-[#9514FA]"}`}>
+          {buy ? "Availabe in Cart" : "Buy Now"}
+        </button>
       </div>
     </div>
   );
