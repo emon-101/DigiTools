@@ -10,8 +10,14 @@ const Card = ({ card }) => {
         <div className="border border-zinc-300 p-2 inline-flex rounded-full mb-4">
           <img className="w-8 h-8 object-cover" src={card.icon} alt="" />
         </div>
-        <div className="absolute top-2 right-2 rounded-full bg-red-500/50 px-4 py-1">
-          best seller
+        <div
+          className={`absolute top-2 right-2 rounded-full px-4 py-1 
+            ${card.tagType === "best-seller" && "bg-[#FEF3C6] text-[#BB4D00]"}
+            ${card.tagType === "popular" && "bg-[#E1E7FF] text-[#4F39F6]"}
+            ${card.tagType === "new" && "bg-[#DBFCE7] text-[#0A883E]"}
+            `}
+        >
+          {card.tag}
         </div>
         <h3 className="text-2xl font-bold mb-4">{card.name}</h3>
         <p className="text-zinc-400 font-light mb-4">{card.description}</p>
