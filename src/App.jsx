@@ -6,6 +6,7 @@ import Stats from "./components/Stats/Stats";
 import Cards from "./components/Cards/Cards";
 import ShoppingCarts from "./components/ShoppingCarts/ShoppingCarts";
 import { ToastContainer } from "react-toastify";
+import Steps from "./components/Steps/Steps";
 
 const fetchProducts = async () => {
   const res = await fetch("/productsData.json");
@@ -62,6 +63,8 @@ function App() {
           )}
         </div>
       </div>
+
+      <Steps />
 
       <ToastContainer />
     </>
