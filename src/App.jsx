@@ -42,7 +42,6 @@ function App() {
               name="my_tabs_1"
               className={`tab rounded-full font-semibold ${tab === "products" && "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"}`}
               aria-label="Products"
-              defaultChecked
               onClick={() => setTab("products")}
             />
             <input
