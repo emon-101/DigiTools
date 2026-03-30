@@ -47,7 +47,7 @@ const Footer = () => {
                     <div className="flex gap-1.5 cursor-pointer">
                         <div className="bg-white rounded-full flex justify-center items-center p-2"><FaInstagram className='text-black' /></div>
                         <div className="bg-white rounded-full flex justify-center items-center p-2"><FaFacebook className='text-black' /></div>
-                        <div className="bg-white rounded-full flex justify-center items-center p-2"><FaXTwitter className='text-black'r /></div>
+                        <div className="bg-white rounded-full flex justify-center items-center p-2"><FaXTwitter className='text-black' /></div>
                     </div>
                 </div>
             </div>

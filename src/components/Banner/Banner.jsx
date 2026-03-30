@@ -5,10 +5,10 @@ import { CiPlay1 } from "react-icons/ci";
 
 const Banner = () => {
   return (
-    <div className="w-4/5 mx-auto my-20">
-      <div className="hero ">
+    <div className="md:w-4/5 mx-auto my-20 px-2">
+      <div className="">
         <div className="hero-content flex-col lg:flex-row-reverse gap-16">
-          <img src={bannerImg} className="max-w-sm rounded-lg shadow-2xl" />
+          <img src={bannerImg} className="w-full rounded-lg shadow-2xl" />
           <div>
             <div className="inline-flex items-center gap-2 bg-[#E1E7FF] text-sm font-medium px-5 py-2 rounded-full mb-4">
               <span className="text-[#4F39F6]">
