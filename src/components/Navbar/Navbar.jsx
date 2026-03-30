@@ -4,7 +4,7 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 const Navbar = ({ carts }) => {
   return (
     <div className="shadow-sm">
-      <div className="navbar bg-base-100 w-4/5 mx-auto py-5">
+      <div className="navbar bg-base-100 md:w-4/5 mx-auto py-5">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -69,7 +69,7 @@ const Navbar = ({ carts }) => {
           </ul>
         </div>
         <div className="navbar-end flex gap-4 items-center">
-          <a className="relative" href="#">
+          <a className="relative hidden md:inline-flex" href="#">
             <div>
                 <HiOutlineShoppingCart className="text-xl font-semibold text-[#101727]" />
             </div>
@@ -77,7 +77,7 @@ const Navbar = ({ carts }) => {
                 carts.length !== 0 ? <div className="absolute -top-2 -right-3 bg-red-500 rounded-full p-1"><span className="text-white text-sm w-3 h-3 flex justify-center items-center">{carts.length}</span></div> : ""
             }
           </a>
-          <a className="font-semibold text-[#101727]" href="">
+          <a className="font-semibold text-[#101727] hidden md:inline-flex" href="">
             Login
           </a>
           <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] px-5 py-2 rounded-full text-white transition-all hover:grayscale-50 font-medium">
